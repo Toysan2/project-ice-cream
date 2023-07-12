@@ -1,0 +1,57 @@
+<section class="about" id="about">
+  <div class="container">
+    <p id="about" class="about__eticet">tradition and love</p>
+    <h2 class="about__title">how it’s made?</h2>
+    <div class="about__wrapper">
+      <div class="about__wrapper-img">
+        <div class="about__imgbackground">
+          <img
+            class="about__img"
+            src="./images/cow.jpg"
+            alt="cow in the pasture"
+            srcset="./images/cow@2x.jpg 2x, ./images/cow@3x.jpg 3x"
+          />
+        </div>
+      </div>
+      <div class="about__wrapper-text">
+        <p class="about__text1">
+          Ice is a place where you will become not only a little happier, but also healthier. Health
+          is the main value for us, and we follow it when creating our handmade desserts.
+        </p>
+
+        <p class="about__text2">
+          We use traditional recipes and 100% natural ingredients. Our products are so natural that
+          they can be given to children from the age of three years. Sweets lovers can expect 55
+          types of ice cream, 15 types of coffee and 23 milkshakes.
+        </p>
+        <p class="about__text3">This is enough to choose ice cream and coffee for any mood!</p>
+        <button class="about__button" type="button" modal-open__read-more>
+          <span class="about__button-text">Read More &#10095;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="backdrop is-hidden" modal__read-more="">
+  <div class="modal__read-more">
+    <button class="modal__close-button" modal-close__read-more type="button">
+      <svg width="24" height="24">
+        <use href="./images/icons.svg#icon-menu_close"></use>
+      </svg>
+    </button>
+    <h2 class="modal__read-more-font-h2">How it's made</h2>
+    <video
+      class="about__video"
+      src="./images/funny-cow.mp4"
+      poster="./images/funny-cow.jpg"
+      controls
+      preload="auto"
+    ></video>
+    <p class="modal__read-more-font-p">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      incididunt ut labore et
+    </p>
+  </div>
+</div>

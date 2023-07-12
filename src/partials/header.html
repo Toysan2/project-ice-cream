@@ -1,0 +1,83 @@
+<!--Nagłówek witryny-->
+<header class="header-section">
+  <div class="container page-header">
+    <div class="page-header__wraper">
+      <svg class="page-header__icons">
+        <use href="./images/icons.svg#icon-logo"></use>
+      </svg>
+      <!--Menu Nav-->
+      <nav>
+        <ul class="page-nav">
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="./index.html">Home</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="#about">How it's made?</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="#products">Our products</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="#contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!--Menu telefon-->
+    <button
+      type="button"
+      class="menu-toggle js-open-menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      data-menu-button
+    >
+      <svg width="32" height="32" aria-label="menu-switcher">
+        <use class="menu-tongle__sandwich" href="./images/icons.svg#icon-menu_open"></use>
+      </svg>
+    </button>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <div class="mobile-header">
+        <svg class="mobile-header__icons" width="60" height="65">
+          <use href="./images/icons.svg#icon-logo"></use>
+        </svg>
+        <button
+          type="button"
+          class="menu-toggle menu-toggle--close js-close-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-button
+        >
+          <svg width="32" height="32" aria-label="menu-switcher">
+            <use class="menu-tongle__cross" href="./images/icons.svg#icon-menu_close"></use>
+          </svg>
+        </button>
+      </div>
+      <!--Nawigacja Menu telefon-->
+      <ul class="mobile-list">
+        <li class="mobile-list__pagename">
+          <a class="mobile-list__item" href="./index.html">Home</a>
+        </li>
+        <li class="mobile-list__pagename">
+          <a class="mobile-list__item" href="#about">How it's made?</a>
+        </li>
+        <li class="mobile-list__pagename">
+          <a class="mobile-list__item" href="#products">Our products</a>
+        </li>
+        <li class="mobile-list__pagename">
+          <a class="mobile-list__item" href="#Contact">Contact</a>
+        </li>
+      </ul>
+      <ul class="mobile-list-button">
+        <li class="mobile-list-button__icons">
+          <button class="mobile-list-button__icons--symbol" data-modalBuy-open>Buy now</button>
+        </li>
+      </ul>
+    </div>
+    <!--Kontakt-->
+    <ul class="contact-button">
+      <li class="contact-button__icons">
+        <button class="contact-button__icons--symbol" modal-buynow-open>Buy now</button>
+      </li>
+    </ul>
+  </div>
+</header>

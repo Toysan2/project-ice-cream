@@ -1,0 +1,101 @@
+.advantages {
+  background-color: getColor('bgGreen');
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-bottom: 69px;
+    align-items: center;
+    @include tablet {
+        flex-direction: row;
+        gap: 80px;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding-bottom: 204px;
+  }
+  @include desktop {
+    justify-content: space-evenly;
+}
+  }
+  &__item {
+    max-width: 230px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 28px;
+    @include tablet {
+       max-width: 152px;
+       padding-bottom: 0px;
+  }
+  @include desktop {
+    max-width: 368px;
+}
+  }
+
+  &__cow::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/icon-cow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F8D24E;
+    border-radius: 50%;
+  }
+
+  &__weight::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/icon-weight.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F8D24E;
+    border-radius: 50%;
+  }
+
+  &__ice-cream::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/icon-ice-cream.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F8D24E;
+    border-radius: 50%;
+  }
+  &__title {
+    padding-top: 16px;
+    font-weight: 700;
+    font-size: 36px;
+    color: getColor('light');
+    padding-bottom: 16px;
+    @include tablet {
+        font-size: 48px;
+        padding-top: 32px;
+        padding-bottom: 12px;
+   }
+   @include desktop {
+    font-size: 58px;
+}
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.7;
+    color: getColor('light');
+    text-align: center;
+    @include tablet {
+        font-size: 14px;
+        line-height: 1.74;
+  }
+  @include desktop {
+    font-size: 16px;
+}
+}
+}

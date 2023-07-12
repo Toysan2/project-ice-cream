@@ -1,7 +1,17 @@
-/*
- * Główny plik dla stylów.
- * Wszystkie partials podłączamy tutaj.
- */
-
-// Style dla pliku z przykładem HTML fragmentu
-@import './example';
+// @use 'utils/vars' as *;
+@import './utils/vars';
+@import './partials/global-styles';
+@import './partials/contacts';
+@import './partials/adventages';
+@import './partials/hero';
+@import './partials/products';
+@import './partials/modal-ingredients';
+@import './partials/about'; 
+@import './partials/footer';
+@import './partials/modal-3';
+@import './partials/modal-4';
+@import './partials/modal-5';
+@import './partials/customer-review';
+@import './partials/modal-buy';
+@import './partials/header';
+@import './partials/menu';

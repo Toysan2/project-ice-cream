@@ -1,0 +1,101 @@
+<div class="backdrop-ingredients is-hidden-ingredients" data-modalIngredients>
+  <form class="ingredients">
+    <button type="button" class="ingredients__btn-close" data-modalIngredients-close>
+      <svg class="ingredients__btn-close-icon" width="24" height="24">
+        <use href="images/icons.svg#icon-menu_close"></use>
+      </svg>
+    </button>
+    <h3 class="ingredients__title">Chololate icecream</h3>
+    <div class="ingredients__bg-photo">
+      <div class="ingredients__photo">
+        <img
+          src="./images/chocolate_ice-cream.jpg"
+          alt="ice cream chocolate"
+          srcset="./images/chocolate_ice-cream@2x.jpg 2x, ./images/chocolate_ice-cream@3x.jpg 3x"
+        />
+      </div>
+    </div>
+    <ul class="ingredients__nutritional nutritional">
+      <li class="nutritional__item">
+        <p class="nutritional__value">320</p>
+        <p class="nutritional__name">kcal</p>
+      </li>
+      <li class="nutritional__item">
+        <p class="nutritional__value">4g</p>
+        <p class="nutritional__name">Protein</p>
+      </li>
+      <li class="nutritional__item">
+        <p class="nutritional__value">8,2g</p>
+        <p class="nutritional__name">Fats</p>
+      </li>
+      <li class="nutritional__item">
+        <p class="nutritional__value">40,4g</p>
+        <p class="nutritional__name">Carbs</p>
+      </li>
+    </ul>
+    <p class="ingredients__ingredients">Ingredients</p>
+    <ul class="ingredients__composition composition">
+      <li class="composition__item">
+        <p>Milk</p>
+        <p>100ml</p>
+      </li>
+      <li class="composition__item">
+        <p>Belgian chocolate</p>
+        <p>20g</p>
+      </li>
+      <li class="composition__item">
+        <p>Cream</p>
+        <p>150 ml</p>
+      </li>
+      <li class="composition__item">
+        <p>Cocoa powder</p>
+        <p>30g</p>
+      </li>
+      <li class="composition__item">
+        <p>Sugar</p>
+        <p>40g</p>
+      </li>
+      <li class="composition__item">
+        <p>Vanilla sugar</p>
+        <p>10g</p>
+      </li>
+    </ul>
+    <div class="ingredients__user user-ingr">
+      <label for="user-name">
+        <input
+          class="user-ingr__input"
+          type="text"
+          name="name"
+          id="user-name"
+          placeholder="Name"
+          required
+          minlength="3"
+          pattern="^\w+\s\w+$"
+        />
+      </label>
+      <label for="user-phone">
+        <input
+          class="user-ingr__input"
+          type="tel"
+          name="phone"
+          id="user-phone"
+          placeholder="Phone"
+          required
+          minlength="9"
+          pattern="^\d+$"
+        />
+      </label>
+      <label for="user-comment">
+        <textarea
+          class="user-ingr__textarea"
+          name="order"
+          id="user-comment"
+          placeholder="Comment"
+        ></textarea>
+      </label>
+    </div>
+    <div class="ingredients__btn-container">
+      <button type="submit" class="ingredients__btn">Submit</button>
+    </div>
+  </form>
+</div>

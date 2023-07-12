@@ -1,0 +1,99 @@
+.header-section {
+        background-color: getColor('bgGreen');
+}
+
+.page-header {
+    display: flex;
+    padding-top: 8px;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 14px;
+
+
+    &__wraper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__icons {
+        width: 40px;
+        height: 37px;
+        
+        @include tablet {
+                width: 48px;
+                height: 44px;
+            }
+        @include desktop {
+            width: 60px;
+            height: 65px;
+        }
+    }
+}
+
+.page-nav {
+    display: none;
+
+    @include desktop {
+        display: flex;
+        gap: 46px;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 220px;
+    }
+
+    &__item {
+        gap: 28px;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: $fontSizeBig;
+        line-height: normal;
+        color: getColor('light');
+        font-style: normal;
+        transition-duration: $transColor;
+        transition-timing-function: $transFill;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: getColor('btnDefault');
+            cursor: pointer;
+        }
+    }
+}
+
+.contact-button {
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-between;
+    display: flex;
+    gap: 50px;
+    font-style: normal;
+
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+
+
+        &--symbol {
+            margin-right: 10px;
+            align-items: center;
+            @include readMore();
+        }
+    }
+}

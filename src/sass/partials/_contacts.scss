@@ -1,0 +1,256 @@
+.contacts-section {
+  background-color: getColor('bgGreen');
+  background-image: url('../images/mobil/Backgroud_mobile.jpg');
+  background-repeat: repeat-x;
+  background-position: center -885px;
+}
+.contacts {
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  &__btn-locations {
+    @include ourLocations;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    &:hover {
+      background-color: getColor('btnHover');
+    }
+    &:focus {
+      background-color: getColor('btnHover');
+      color: white;
+    }
+    &:disabled {
+      background-color: getColor('btnDisabled');
+    }
+  }
+  &__btn-franchise {
+    @include franchise;
+    &:hover {
+      border-color: getColor('btnHover');
+    }
+    &:focus {
+      border-color: getColor('btnHover');
+      color: white;
+    }
+    &:disabled {
+      border-color: getColor('btnDisabled');
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  &__item {
+    max-width: 280px;
+    padding: 40px 32px 24px 32px;
+    background-color: getColor('light');
+    border-radius: 24px;
+    box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
+    font-weight: 500;
+    font-size: $fontSizeSmaller;
+    color: getColor('dark');
+  }
+  &__cafe {
+    line-height: 1.2;
+    letter-spacing: 0.48px;
+    background-color: getColor('yellow');
+    border-radius: 4px;
+    width: 80px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__foodtruck {
+    @extend .contact__cafe;
+    width: 130px;
+  }
+  &__city {
+    line-height: 1.86;
+    letter-spacing: 0.48px;
+    margin-bottom: 8px;
+    font-style: normal;
+  }
+  &__details {
+    line-height: 1.83;
+    letter-spacing: 0.48px;
+    color: getColor('iceBgBrown');
+    display: block;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+  &__underline {
+    color: #e1e1e1;
+    margin-bottom: 24px;
+    margin-top: 24px;
+  }
+  &__days-opening {
+    line-height: 1.86;
+  }
+  &__hours-opening-week {
+    color: #ababab;
+    line-height: 1.86;
+    margin-bottom: 8px;
+  }
+  &__hours-opening-weekend {
+    @extend .contact__hours-opening-week;
+    margin-bottom: 0;
+  }
+  &__phone {
+    line-height: 1.6;
+  }
+  &__mail {
+    @extend .contact__phone;
+    margin-top: 6px;
+  }
+}
+
+@media #{$tablet} {
+  .contacts-section {
+    background-image: url('../images/tablet/Background_tablet.jpg');
+    background-position: center -710px;
+  }
+  .contacts {
+    padding-bottom: 40px;
+    &__buttons {
+      flex-direction: row;
+      gap: 16px;
+      margin-top: 40px;
+    }
+    &__btn-locations {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .contact {
+    flex-direction: row;
+    &__item {
+      max-width: 224px;
+      padding: 40px 24px 40px 24px;
+      font-size: $fontSizeSmall;
+    }
+    &__cafe {
+      line-height: 1.4;
+      letter-spacing: 0.64px;
+      font-size: $fontSizeBig;
+      border-radius: 6px;
+      width: 73px;
+      height: 30px;
+      margin-bottom: 32px;
+    }
+    &__foodtruck {
+      line-height: 1.4;
+      letter-spacing: 0.64px;
+      font-size: $fontSizeBig;
+      border-radius: 6px;
+      width: 138px;
+      height: 30px;
+      margin-bottom: 32px;
+    }
+    &__city {
+      letter-spacing: 0.56px;
+      margin-bottom: 12px;
+    }
+    &__details {
+      letter-spacing: 0.56px;
+    }
+    &__underline {
+      color: #e1e1e1;
+      margin-bottom: 32px;
+      margin-top: 32px;
+    }
+    &__phone {
+      line-height: 1.5;
+    }
+    &__mail {
+      line-height: 1.5;
+      margin-top: 4px;
+    }
+  }
+}
+
+@media #{$desktop} {
+  .contacts-section {
+    background-image: url('../images/desktop/Backgroud_desktop.jpg');
+    background-position: center -1220px;
+  }
+  .contacts {
+    padding-bottom: 120px;
+    &__buttons {
+      flex-direction: row;
+      gap: 16px;
+      margin-top: 60px;
+    }
+    &__btn-locations {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .contact {
+    flex-direction: row;
+    gap: 32px;
+    &__item {
+      max-width: 368px;
+      padding: 40px;
+      font-size: $fontSizeBig;
+    }
+    &__cafe {
+      line-height: 1.4;
+      letter-spacing: 0.64px;
+      font-size: $fontSizeBig;
+      border-radius: 6px;
+      width: 76px;
+      height: 30px;
+      margin-bottom: 36px;
+    }
+    &__foodtruck {
+      line-height: 1.4;
+      letter-spacing: 0.64px;
+      font-size: $fontSizeBig;
+      border-radius: 6px;
+      width: 148px;
+      height: 30px;
+      margin-bottom: 36px;
+    }
+    &__city {
+      letter-spacing: 0.64px;
+      margin-bottom: 8px;
+    }
+    &__details {
+      letter-spacing: 0.64px;
+    }
+    &__underline {
+      color: #e1e1e1;
+      margin-bottom: 32px;
+      margin-top: 32px;
+    }
+    &__hours-opening-week {
+      margin-bottom: 12px;
+    }
+
+    &__phone {
+      line-height: 1.5;
+    }
+    &__mail {
+      line-height: 1.5;
+      margin-top: 4px;
+    }
+  }
+}

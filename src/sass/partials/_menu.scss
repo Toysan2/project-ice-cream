@@ -1,0 +1,116 @@
+//Mobile menu
+
+.menu-toggle {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    background: none;
+    fill: #FFFFFF;
+    cursor: pointer;
+    text-align: right;
+
+    @include tablet {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    @include desktop {
+        display: none;
+    }
+
+    &:hover,
+    &:focus {
+        fill: getColor('btnDefault');
+        transition-duration: $transFill;
+        transition-timing-function: $transTransform;
+    }
+
+    &--close {
+        margin-left: auto;
+    }
+}
+
+.mobile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 32px 0 32px;
+
+    &__icons {
+            width: 40px;
+            height: 37px;
+    
+            @include tablet {
+                width: 48px;
+                height: 44px;
+            }
+        }
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: auto;
+    inset: 0;
+    position: fixed;
+    background-color: getColor('bgGreen');
+    z-index: 9;
+    transform: translateX(100%);
+    transition: $transVisibility, $transOpacity, $transTransform;
+}
+
+.menu-container.is-open {
+    transform: translateX(0);
+}
+
+.mobile-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 48px;
+
+    &__pagename:first-child {
+        margin-top: 0;
+    }
+    &__pagename {
+        margin-top: 32px;
+    }
+}
+
+.mobile-list__item {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: normal;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    justify-content: center;
+
+    @media #{$tablet} {
+        font-size: 48px;
+        gap: 40px;
+    }
+
+    &:hover,
+    &:focus {
+        color: getColor('dark');
+        transition: $transVisibility, $transTransform;
+    }
+}
+
+.mobile-list-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 110px;
+
+    @media screen and (min-width: 767px) {
+        display: none;
+    }
+
+    &__icons--symbol {
+        @include readMore();
+    }
+}
