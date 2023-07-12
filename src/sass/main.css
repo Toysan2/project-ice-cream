@@ -1498,6 +1498,9 @@ body {
     padding-bottom: 99px;
   }
 }
+.about__container {
+  padding: 0;
+}
 .about__eticet {
   color: #fcfcfc;
   font-weight: 700;
@@ -1525,21 +1528,26 @@ body {
   font-size: 30px;
   line-height: 1.257;
   text-transform: uppercase;
-  margin-bottom: 32px;
-  margin-left: 135px;
-  margin-right: 135px;
+  margin: 0 auto 32px auto;
+  text-align: center;
+  max-width: 200px;
+  max-height: 114px;
 }
 @media screen and (min-width: 768px) {
   .about__title {
     font-size: 34px;
-    margin-bottom: 80px;
+    margin: 0 auto 80px auto;
     text-align: center;
+    max-width: 454px;
+    max-height: 43px;
   }
 }
 @media screen and (min-width: 1200px) {
   .about__title {
     font-size: 36px;
-    margin-bottom: 82px;
+    margin: 0 auto 82px auto;
+    max-width: 481px;
+    max-height: 45px;
   }
 }
 .about__wrapper {
@@ -1565,6 +1573,7 @@ body {
     -moz-column-gap: 109px;
          column-gap: 109px;
     justify-content: flex-start;
+    padding-left: 17px;
   }
 }
 .about__wrapper-img {

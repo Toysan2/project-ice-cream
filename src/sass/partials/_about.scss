@@ -13,6 +13,9 @@
   @include desktop {
     padding-bottom: 99px;
   }
+  &__container {
+    padding: 0;
+  }
   &__eticet {
     color: getColor('light');
     font-weight: 700;
@@ -36,17 +39,22 @@
     font-size: 30px;
     line-height: 1.257;
     text-transform: uppercase;
-    margin-bottom: 32px;
-    margin-left: 135px;
-    margin-right: 135px;
+    margin: 0 auto 32px auto;
+    text-align: center;
+    max-width: 200px;
+    max-height: 114px;
     @include tablet {
       font-size: 34px;
-      margin-bottom: 80px;
+      margin: 0 auto 80px auto;
       text-align: center;
+      max-width: 454px;
+      max-height: 43px;
     }
     @include desktop {
       font-size: 36px;
-      margin-bottom: 82px;
+      margin: 0 auto 82px auto;
+      max-width: 481px;
+      max-height: 45px;
     }
   }
   &__wrapper {
@@ -66,6 +74,7 @@
     @include desktop {
       column-gap: 109px;
       justify-content: flex-start;
+      padding-left: 17px;
     }
   }
   &__wrapper-img {
