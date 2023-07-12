@@ -1627,7 +1627,7 @@ body {
   }
 }
 .about__wrapper-text {
-  padding: 0 110px;
+  max-width: 220px;
 }
 @media screen and (min-width: 768px) {
   .about__wrapper-text {
